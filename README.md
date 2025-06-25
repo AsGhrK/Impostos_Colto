@@ -1,67 +1,75 @@
+# 💰 IR Expert - Simulador de Imposto de Renda
 
-# 💰 IR Expert - Simulador de Imposto de Renda (PF e PJ)
+Projeto desenvolvido para a disciplina de **Matemática Aplicada** - Curso de Análise e Desenvolvimento de Sistemas.
 
-Projeto desenvolvido para a disciplina de Matemática Aplicada - Curso de Análise e Desenvolvimento de Sistemas.
+## 📋 Descrição
 
-## 🧠 Descrição
-O **IR Expert** é uma aplicação que simula de forma precisa o cálculo de **Imposto de Renda de Pessoa Física (IRPF)** e **Pessoa Jurídica (IRPJ)**, utilizando dados reais e atualizados, com integração via API.
+O **IR Expert** é uma aplicação web que calcula o Imposto de Renda para Pessoa Física (IRPF) e Pessoa Jurídica (IRPJ), com integração de APIs para consulta de CNPJ e cotação do dólar.
 
-## 🚀 Funcionalidades
-- ✅ Cálculo de IRPF com:
-  - Salário bruto
-  - Dependentes
-  - Despesas médicas
-  - Educação
-  - Previdência
+## ✨ Funcionalidades
 
-- ✅ Cálculo de IRPJ:
-  - Lucro Presumido (comércio e serviços)
-  - Lucro Real
+### 👤 Pessoa Física (IRPF)
+- Cálculo baseado em salário bruto mensal
+- Dedução por dependentes
+- Dedução de despesas médicas e educação
+- Dedução de previdência
 
-- ✅ Consulta automática de CNPJ via **BrasilAPI**.
-- ✅ Consulta de câmbio em tempo real via **AwesomeAPI**.
-- ✅ Interface interativa e fácil de usar (Streamlit).
+### 🏢 Pessoa Jurídica (IRPJ)
+- **Lucro Presumido:** Para comércio (8%) e serviços (32%)
+- **Lucro Real:** Cálculo direto sobre o lucro
 
-## 🔗 APIs Utilizadas
-- [BrasilAPI - CNPJ](https://brasilapi.com.br/)
-- [AwesomeAPI - Câmbio](https://docs.awesomeapi.com.br/api-de-moedas)
+### 🔗 Integrações
+- Consulta de CNPJ via BrasilAPI
+- Cotação USD/BRL via AwesomeAPI
 
-## 🏗️ Tecnologias
-- Python
-- Streamlit
-- Requests
-- Pandas
-- Plotly
-- FPDF
+## 🛠️ Tecnologias
 
-## 📦 Instalação
+- Python 3.11+
+- Streamlit (interface web)
+- Requests (APIs)
+- Pandas, Plotly, FPDF
 
-1. Clone este repositório:
+## 🚀 Como Executar
 
+### 1. Baixar o projeto
 ```bash
-git clone https://github.com/seuusuario/ir-expert.git
+git clone https://github.com/AsGhrK/Impostos_Colto.git
 cd ir-expert
 ```
-
-2. Instale as dependências:
-
 ```bash
 pip install -r requirements.txt
 ```
-
-3. Execute a aplicação:
-
 ```bash
 streamlit run app.py
 ```
+```bash
+http://localhost:8501
+```
+### 📁 Estrutura dos Arquivos
 
-## 🖥️ Acesso
-O app rodará localmente em:  
-`http://localhost:8501`
+app.py - Interface principal do Streamlit
+calculations.py - Funções de cálculo de impostos
+services.py - Integração com APIs externas
+requirements.txt - Lista de dependências
 
-## 📜 Licença
-MIT License.
+### 🧮 Como Usar
+Para Pessoa Física:
 
-## 👥 Autores
-- Davi Casari
-- Gustavo Bravin
+Acesse a aba "Pessoa Física"
+Preencha: salário, dependentes, despesas
+Clique em "Calcular IRPF"
+
+Para Pessoa Jurídica:
+
+Acesse a aba "Pessoa Jurídica"
+Escolha: Lucro Presumido ou Lucro Real
+Preencha os dados solicitados
+Clique em "Calcular IRPJ"
+
+###👥 Autores
+
+Davi Casari
+Gustavo Bravin
+
+###📄 Licença
+MIT License
