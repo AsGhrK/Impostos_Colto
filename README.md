@@ -66,10 +66,10 @@ Escolha: Lucro Presumido ou Lucro Real
 Preencha os dados solicitados
 Clique em "Calcular IRPJ"
 
-###👥 Autores
+### 👥 Autores
 
 Davi Casari
 Gustavo Bravin
 
-###📄 Licença
+### 📄 Licença
 MIT License
